@@ -38,28 +38,35 @@ Następnie wykonaj następujące kroki:
 git clone https://github.com/lukaszwojcikdev/ogonki.git
 
 2. **Przejdź do katalogu z projektem:**
+3. 
 cd ogonki
 
-3. **Skompiluj program:**
+4. **Skompiluj program:**
    
 go build ogonki.go
 
 4. **Uruchomienie programu:**
    
 Linux:
+
 ./ogonki.go
+
 Windows:
+
 ogonki.exe
 
 ## Autor
 
 Ten program został stworzony przez [Łukasz Wójcik]. 
+
 Jeśli masz jakiekolwiek pytania lub uwagi, skontaktuj się ze mną pod adresem kontakt(at)lukaszwojcik.eu
 
 ## Licencja
 
 Ten projekt jest objęty licencją [MIT]. 
+
 Szczegóły znajdują się w pliku [[LICENSE](https://github.com/lukaszwojcikdev/ogonki/blob/main/LICENSE)].
 
 Mam nadzieję, że program Ci się spodobał i będzie Ci pomocny.
+
 Jeśli masz jakieś pytania, śmiało pytaj, postaram się odpowiedzieć jak najszybciej.
