@@ -40,12 +40,12 @@ git clone https://github.com/lukaszwojcikdev/ogonki.git
    
 cd tails
 
-4. **Compile the program:**
+3. **Compile the program:**
    
 go build ogonki.go
 
 4. **Starting the program:**
-     
+
 *Linux:*
 
 ./ogonki.go
