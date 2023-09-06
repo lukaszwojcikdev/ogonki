@@ -45,7 +45,7 @@ cd tails
 go build ogonki.go
 
 4. **Starting the program:**
-   
+     
 *Linux:*
 
 ./ogonki.go
