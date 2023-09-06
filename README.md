@@ -1,5 +1,4 @@
-## Making Life Easier for Programmers: 
-A Simple Solution to Diacritical Marks in Text Files ##
+## Making Life Easier for Programmers: A Simple Solution to Diacritical Marks in Text Files ##
 
 # OPIS
 Ten program jest narzędziem do zamiany `ogonków` w plikach tekstowych niesformatowanych (najlepiej kodowanych w UTF-8).
