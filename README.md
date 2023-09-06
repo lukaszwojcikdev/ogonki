@@ -1,51 +1,51 @@
 ## Making Life Easier for Programmers: A Simple Solution to Diacritical Marks in Text Files ##
 
-# OPIS
-Ten program jest narzędziem do zamiany `ogonków` w plikach tekstowych niesformatowanych (najlepiej kodowanych w UTF-8).
+# DESCRIPTION
 
-Obsługuje 66 języków.
+This program is a tool for replacing `tails` in unformatted text files (preferably encoded in UTF-8).
 
-Na początku program definiuje mapę `ogonki`, która zawiera zestawy znaków specyficznych dla każdego z obsługiwanych języków.
+It supports 66 languages.
 
-Główna funkcja `main` rozpoczyna od obsługi flag. 
-Dostępne flagi to `-help` (wyswietlenie pomocy) i `-lang <jezyk>` (wybór języka ogonków, domyślnie `pl`).
+At the beginning, the program defines a `tail map`, which contains sets of characters specific to each of the supported languages.
 
-Następnie program pobiera ścieżki dostępu do plików jako argumenty wiersza poleceń.
+The main function: `main` starts with handling flags. The available flags are `-help` (display help) and `-lang` <language> (choose the `tail` language, `pl` by default).
 
-Jeśli nie zostanie podana żadna ścieżka, program wyświetli komunikat o błędzie i zakończy działanie.
+The program then takes file paths as command line arguments.
 
-Dla każdej podanej ścieżki dostępu program sprawdza rozszerzenie pliku (rozpoznaje do 180 rozszerzeń plików tekstowych niesofmratowanych).
+If no path is specified, the program displays an error message and exits.
 
-Jeśli jest to jedno z obsługiwanych rozszerzeń, program wczytuje zawartość pliku, zamienia ogonki przy użyciu funkcji `replaceOgonki` dla zadanego języka, a następnie zapisuje zmodyfikowaną zawartość do nowego pliku o nazwie `<oryginalna_nazwa_pliku>_modified.txt`.
+For each given access path, the program checks the file extension (recognizes up to 180 extensions of non-software text files).
 
-Proces zamiany ogonków odbywa się za pomocą funkcji `replaceOgonki`, która iteruje przez wszystkie znaki ogonków dla danego języka i zamienia je na odpowiednie zastępcze znaki.
+If it is one of the supported extensions, the program reads the content of the file, replaces the tails using the `replaceTags` function for the given language, and then saves the modified content to a new file named `<original_file_name>_modified.txt`.
 
-Funkcja `getReplacement` określa zastępcze znaki dla poszczególnych ogonków. 
-Zamianie ulegają, diakrytyki, np: `ą` na `a` , `ć` na `c`, itd z pozostałymi znakami. 
-Pozostałe znaki wytępujące w tekście zamieniane są na siebie same.
+The process of replacing tails is done using the `replaceTails` function, which iterates through all the tailing characters for a given language and replaces them with the appropriate replacement characters.
 
-Funkcja `printHelp` wyświetla pomoc dotyczącą korzystania z programu, opisuje obsługiwane flagi i języki oraz podaje przykłady użycia.
+The `getReplacement` function specifies replacement characters for individual tails.
+Diacritics are changed, e.g., `ą` to `a`, `ć` to `c`, etc., with the remaining characters.
+Other characters in the text are replaced by themselves.
 
-# INSTRUKCJA
+The `printHelp` function displays help on how to use the program, describes the supported flags and languages, and gives examples of use.
 
-Aby uruchomić program, musisz mieć zainstalowany kompilator języka Go na swoim urządzeniu. 
+# MANUAL
 
-Następnie wykonaj następujące kroki:
+To run the program, you must have a Go compiler installed on your device.
 
-1. **Sklonuj repozytorium na swoje urządzenie:**
-   
+Then follow these steps:
+
+1. **Clone the repository to your device:**
+   
 git clone https://github.com/lukaszwojcikdev/ogonki.git
 
-2. **Przejdź do katalogu z projektem:**
-   
-cd ogonki
+2. **Go to the project directory:**
+   
+cd tails
 
-4. **Skompiluj program:**
-   
+4. **Compile the program:**
+   
 go build ogonki.go
 
-4. **Uruchomienie programu:**
-   
+4. **Starting the program:**
+   
 *Linux:*
 
 ./ogonki.go
@@ -54,18 +54,18 @@ go build ogonki.go
 
 ogonki.exe
 
-## Autor
+## Author
 
-Ten program został stworzony przez [Łukasz Wójcik]. 
+This program was created by [Lukasz Wójcik].
 
-Jeśli masz jakiekolwiek pytania lub uwagi, skontaktuj się ze mną pod adresem kontakt(at)lukaszwojcik.eu
+If you have any questions or comments, please contact me at kontakt(at)lukaszwojcik.eu
 
-## Licencja
+## License
 
-Ten projekt jest objęty licencją [[MIT](https://opensource.org/license/mit/)]. 
+This project is licensed under [[MIT](https://opensource.org/license/mit/)].
 
-Szczegóły znajdują się w pliku [[LICENSE](https://github.com/lukaszwojcikdev/ogonki/blob/main/LICENSE)].
+Details can be found in the file [[LICENSE](https://github.com/lukaszwojcikdev/ogonki/blob/main/LICENSE)].
 
-Mam nadzieję, że program Ci się spodobał i będzie Ci pomocny.
+I hope you liked the program and it will be helpful to you.
 
-Jeśli masz jakieś pytania, śmiało pytaj, postaram się odpowiedzieć jak najszybciej.
+If you have any questions, feel free to ask, I will try to answer as soon as possible.
