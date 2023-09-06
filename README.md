@@ -14,7 +14,7 @@ Następnie program pobiera ścieżki dostępu do plików jako argumenty wiersza 
 
 Jeśli nie zostanie podana żadna ścieżka, program wyświetli komunikat o błędzie i zakończy działanie.
 
-Dla każdej podanej ścieżki dostępu program sprawdza rozszerzenie pliku.
+Dla każdej podanej ścieżki dostępu program sprawdza rozszerzenie pliku (rozpoznaje do 180 rozszerzeń plików tekstowych niesofmratowanych).
 
 Jeśli jest to jedno z obsługiwanych rozszerzeń, program wczytuje zawartość pliku, zamienia ogonki przy użyciu funkcji `replaceOgonki` dla zadanego języka, a następnie zapisuje zmodyfikowaną zawartość do nowego pliku o nazwie `<oryginalna_nazwa_pliku>_modified.txt`.
 
