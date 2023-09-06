@@ -1,4 +1,5 @@
-## Making Life Easier for Programmers: A Simple Solution to Diacritical Marks in Text Files ##
+## Making Life Easier for Programmers: 
+A Simple Solution to Diacritical Marks in Text Files ##
 
 ## OPIS
 Ten program jest narzędziem do zamiany `ogonków` w plikach tekstowych niesformatowanych (najlepiej kodowanych w UTF-8). 
@@ -28,16 +29,16 @@ Funkcja `printHelp` wyświetla pomoc dotyczącą korzystania z programu, opisuje
 Aby uruchomić program, musisz mieć zainstalowany kompilator języka Go na swoim urządzeniu. 
 Następnie wykonaj następujące kroki:
 
-1. Sklonuj repozytorium na swoje urządzenie:
+1. **Sklonuj repozytorium na swoje urządzenie:**
 git clone https://github.com/lukaszwojcikdev/ogonki.git
 
-2. Przejdź do katalogu z projektem:
+2. **Przejdź do katalogu z projektem:**
 cd ogonki
 
-3. Skompiluj program:
+3. **Skompiluj program:**
 go build ogonki.go
 
-4. Uruchomienie programu:
+4. **Uruchomienie programu:**
 Linux:
 ./ogonki.go
 Windows:
@@ -51,7 +52,7 @@ Jeśli masz jakiekolwiek pytania lub uwagi, skontaktuj się ze mną pod adresem 
 ## Licencja
 
 Ten projekt jest objęty licencją [MIT]. 
-Szczegóły znajdują się w pliku [nazwa licencji].
+Szczegóły znajdują się w pliku [[LICENSE](https://github.com/lukaszwojcikdev/ogonki/blob/main/LICENSE)].
 
 Mam nadzieję, że program Ci się spodobał i będzie Ci pomocny.
 Jeśli masz jakieś pytania, śmiało pytaj, postaram się odpowiedzieć jak najszybciej.
