@@ -44,15 +44,7 @@ cd tails
    
 go build ogonki.go
 
-4. **Starting the program:**
-
-*Linux:*
-
-./ogonki.go
-
-*Windows:*
-
-ogonki.exe
+4. **Starting the program:** *Linux:* ./ogonki.go or *Windows:* ogonki.exe
 
 ## Author
 
