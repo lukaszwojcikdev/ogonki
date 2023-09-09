@@ -1,4 +1,4 @@
-## Making Life Easier for Programmers: A Simple Solution to Diacritical Marks in Text Files ##
+## Making Life Easier for Programmers: A Simple Solution to Diacritical Marks in Text Files (66 languages) ##
 
 # DESCRIPTION
 
@@ -6,7 +6,7 @@ This program is a tool for replacing `tails` in unformatted text files (preferab
 
 It supports 66 languages.
 
-At the beginning, the program defines a `tail map`, which contains sets of characters specific to each of the supported languages.
+In the beginning, the program defines a `tail map`, which contains sets of characters specific to each of the supported languages.
 
 The main function: `main` starts with handling flags. The available flags are `-help` (display help) and `-lang` <language> (choose the `tail` language, `pl` by default).
 
