@@ -1,4 +1,5 @@
 package main
+//Import of packages that are used in the program.
 import (
     "flag"
     "fmt"
@@ -7,23 +8,27 @@ import (
     "strings"
     "path/filepath"
 )
+
+//This piece of code defines a set of key-value pairs, 
+//where the key is the name of the language 
+//and the value is a set of special characters from that language
 var ogonki = map[string]string{
-	 //-------------------------------------------------------
-	 //Albański | Albanian (sq) 
+    //-------------------------------------------------------
+    //Albański | Albanian (sq) 
 		"sq": "çéëÇËÉ",
-	 //Baskijksi | Basque (eu)
+    //Baskijksi | Basque (eu)
 		"eu": "áéíóúüñÁÉÍÓÚÜÑ",
-	 //Bretoński | Breton (br) 
+    //Bretoński | Breton (br) 
 		"br": "âãäæçéèêëêôöœûüùñŷýÿìïîŕśÂÄÃÆÇÉÈÊËÔÖŒÑÙÛÜŶÌÏÎŔŚÝŸ",
-	 //Kataloński | Catalan (ca) 
+    //Kataloński | Catalan (ca) 
 		"ca": "áàà́èéè́íìòóò́ïúüùýÁÀÀ́ÈÉÈ́ÏÍÌÒÒ́ÓÚÜÙÝ",
-	 //Chorwacki | Croatian (hr)
+    //Chorwacki | Croatian (hr)
 		"hr": "čćđšžČĆĐŠŽ",
-	 //Czeski | Czech (cz) 
+    //Czeski | Czech (cz) 
 		"cz":"áčďéěíňóřšťúůýžÁČĎÉĚÍŇÓŘŠŤÚŮÝŽ",
-	 //Duński | Danish (dk) 
+    //Duński | Danish (dk) 
 		"dk":"æøåÆØÅ",
-	 //Niderlandzki (Holenderski) | Dutch/Netherlands (nl) 
+     //Niderlandzki (Holenderski) | Dutch/Netherlands (nl) 
 		"nl": "äáéëïíóöüúÄÁÉËÍÏÓÖÜÚ",
      //Estoński | Estonian (et) 
 		"et": "äöõüšžÄÖÕÜŠŽ",
@@ -31,7 +36,7 @@ var ogonki = map[string]string{
 		"fi":"äåöÄÅÖ",
      //Francuski | French (fr)
 		"fr":"àâäçéèêëîïôûùüÿœæÀÄÂÇÉÈÊËÎÏÔÛÙÜŸŒÆ",
-	 //Galicyjski/Galisyjski | Galician (gl)
+     //Galicyjski/Galisyjski | Galician (gl)
 		"gl": "áéíóúñüÁÉÍÓÚÑÜ",
      //Węgierski | Hungarian (hu)
 		"hu":"áéíóöőúüűÁÉÍÓÖŐÚÜŰ",
@@ -45,7 +50,7 @@ var ogonki = map[string]string{
 		"lv": "āčēģīķļņšūžĀČĒĢĪĶĻŅŠŪŽ",
      //Litewski | Lithuanian (lt)
 		"lt": "ąčęėįį̇šųūžĄČĘĖĮĮ̇ŠŲŪŽ",
-	 //Maltański/Maltyjski | Maltese/Malta (mt)
+     //Maltański/Maltyjski | Maltese/Malta (mt)
 		"mt": "ċġħżĊĠĦŻ",
      //Norweski | Norwegian (no)
 		"no":"áéíæøóåúýÆØÁÅÉÍÓÚÝ",
@@ -69,7 +74,7 @@ var ogonki = map[string]string{
 		"ba": "ćčđšžıĆČĐŠŽ",
      //Grecki | Greek (el)
 		"el":"άαβγδεέζηθικλμνξοπρστήίϊΐυύΰϋόφχψωώΆΓΔΘΛΈΞΠΉΊΪΣΌΦΨΏΩΎΫ",
-	 //Serbski | Serbian (sr)
+     //Serbski | Serbian (sr)
 		"sr": "čćđšžüČĆĐŠŽÜ", 
      //Łaciński | Latin (la)
 		"la": "áąāéęēīōūȳǖǘǚǜċćġħǰŝźćģķļłņńŗśźżǎěǐǒóúǔǖǘǚǜǧğıíįķļŉǫřśŝţťūǔůẏýžæœÁĄĀĒÉĘĪŌÓŪȲǕǗǙǛĊĆĠĦŜŹĆĢĶĻŁŅŃŖŚŹŻǍĚÍǏǑǓǕǗǙǛǦĞİĮĶĻŊǪŘŚŜŢŤÚŪǓŮẎÝŽÆŒ",
@@ -93,83 +98,95 @@ var ogonki = map[string]string{
 		"lb": "âäéëîïôöûüŷÂÄÉËÎÏÔÖÛÜŶ",
      //Mołdawski    | Moldovan (md)
 		"md": "ăâîșşțţĂÂÎȘŞȚŢ", 
-	 //Romski/Cygański | Romani (rom) 
+     //Romski/Cygański | Romani (rom) 
 		"rom": "ạảấầẩẫậắằẳẵặáa̧ǎăȃâãǣćčđȩéěĕȇêẹ̄ẻếềểễệêëîỉịíi̧ǐĭȋîị̄ļłňỏốồổỗộớờởỡợóo̧ǒŏȏôọ̄ǿöőřśšţťüůűùúu̧ǔŭȗûụ̄ụủứừửữựýźžẠÃẢẤẦÁẨẪẬẮẰẲẴẶA̧ǍĂȂÂÃǢĆČĐÉȨĚĔÊẸ̄ẺẾỀỂỄỆĚËỈÎỊI̧ÍǏĬȊÎỊ̄ĻŁŇỎỐỒỔỖỘỚỜỞỠỢÓO̧ǑŎȎÔỌ̄ǾÖŐŘŚŠŤŢŮÜŰÚU̧ǓŬUÙÛỤ̄ỤỦỨỪỬỮỰÝŹŽ",
-	 //Szwajcarski niemiecki | Swiss German (gsw)
+     //Szwajcarski niemiecki | Swiss German (gsw)
 		"gsw": "àäëïöüÿÀÄËÏÖÜŸ",
-	 //Szwajcarski włoski | Swiss Italian (ch-it) 
+     //Szwajcarski włoski | Swiss Italian (ch-it) 
 		"ch-it": "àèéìòóùÀÈÉÌÒÓÙ",
      //Łemkowski | Lemko (x-lmk) 
 		"x-lmk": "åäǎąćďęěįǐĺľłńňóǒöøŕřśšťųüůýźžÅÄǍĄĆĎĘĚǏĮĹĽŁŃŇÓǑÖØŔŘŚŠŤŮŲÜÝŹŽ",	
-	 //Ao (języka Naga) | Ao language (ao)
+     //Ao (języka Naga) | Ao language (ao)
 		"ao": "ǎǐěǒǔñńňřłǍĚǑǓÑŃŇŘŁ",
-	 //Gaskoński | Gascon (gn)
+     //Gaskoński | Gascon (gn)
 		"gn" : "âéèêëïîòôöüùûÂÉÈÊËÏÎÒÔÖÜÙÛ",
-	 //Staropruski | Old Prussian (op)
+     //Staropruski | Old Prussian (op)
 		"op": "ąčęėēģīķłńõōšūžĄČĘĖĒĢĪĶŁŃÕŌŠŪŽ",
-	 //Kuriński | Kurin (kv) 
+     //Kuriński | Kurin (kv) 
 		"kv": "āēīōūǣǫœġḥḳṣṭŋĀĒĪŌŪǢǪŒĠḤḲṢṬŊ",
-	 //Degestański | Dagestani (di)
+     //Degestański | Dagestani (di)
 		"di": "āə̄ēīōūȳĀƏ̄ĒĪŌŪȲ",
-	 //Szwedzki | Swedish (sv)
+     //Szwedzki | Swedish (sv)
 		"sv": "åäöÅÄÖ",
-	 //Prowansalski | Occitan (oc)
+     //Prowansalski | Occitan (oc)
 		"oc": "áàâéèêíìîóòôúùûëïüçÁÀÂÉÈÊÍÌÎÓÒÔÚÙÛËÏÜÇ",
-	 //Sardyński | Sardinian (sc)
+      //Sardyński | Sardinian (sc)
 		"sc": "àèéìòùÀÈÉÌÒÙ",
-	 //Korsykański | Corsican (co)
+      //Korsykański | Corsican (co)
 		"co": "àèìòùÀÈÌÒÙ",
-	 //Retoromański | Romansh (rm)
+      //Retoromański | Romansh (rm)
 		"rm": "áàâǎäąéèêěëęíìîǐïįóòôǒöǫúùûǔüųçčśŝšţñņňŋåŧðłÁÀÂǍÄĄÉÈÊĚËĘÍÌÎǏÏĮÓÒÔǑÖǪÚÙÛǓÜŲÇČŚŜŠŢÑŅŇŊÅŦÐŁ",
-	 //Arumuński | Aromanian (rup)
+      //Arumuński | Aromanian (rup)
 		"rup": "âăćĕëîńŏřśţŭźÂĂĆĔËÎŃŎŘŚŢŬŹ",
-	 //Szkocki | Scottish Gaelic (gd)
+      //Szkocki | Scottish Gaelic (gd)
 		"gd": "àáâäéèêëìíîïòóôöùúûüýÀÁÂÄÈÊËÉÌÍÎÏÔÓÒÖÙÚÛÜÝ",
-	 //Kornwalijski | Cornish (crn)
+      //Kornwalijski | Cornish (crn)
 		"crn": "âêĵôûŵŷÂÊĴÔÛŴŶ",
-	 //Liwski | Livonian (liv)
+      //Liwski | Livonian (liv)
 		"liv": "áčėęė́ĩįį́į̃ĺņņ̌õóšųų̃ų̄ų̃̄ų̃̌ų̄̌ỹžÁČĖĘĖ́ĨĮĮ́Į̃ĹŅŅ̌ÕÓŠŲŲ̃Ų̄Ų̃̄Ų̃̌Ų̄̌ỸŽ",
-	 //Mordwiński | Moksha (mdf)
+      //Mordwiński | Moksha (mdf)
 		"mdf": "ĺćńśẃẁŕḿǵźj́ɗ́ɗťĹĆŃŚẂẀŔḾǴŹJ́Ɗ́ƊŤ",
-	 //Woro | Võro (fiu)
+      //Woro | Võro (fiu)
 		"fiu": "äöüõšžåÄÖÜÕŠŽÅ",
-	 //Kazachski | Kazakh (kaz)
+      //Kazachski | Kazakh (kaz)
 		"kaz": "äïöüÄÏÖÜ",
-	 //Gagauski | Gagauz (tut)
+      //Gagauski | Gagauz (tut)
 		"tut": "ăâäêıîöőûüűĂÂÄÊİÎÖŐÛÜŰ",
-	 //Karaimski | Karaim (kdr)
+      //Karaimski | Karaim (kdr)
 		"kdr": "ėäöüńşźáéíóúĖÄÖÜŃŞŹÁÉÍÓÚ",
-	 //Baskijski | Basque (baq)
+      //Baskijski | Basque (baq)
 		"baq": "áéíóúüñÁÉÍÓÚÜÑ",
-	 //Keczucki | Quechua (qu)
+      //Keczucki | Quechua (qu)
 		"qu": "áéíóúñÁÉÍÓÚÑ",
-	 //Ajmarski | Aymara (ay)
+      //Ajmarski | Aymara (ay)
 		"ay": "ąęįǫųĄĘĮǪŲ",
-	 //Portugalski | Portuguese (pt)
+      //Portugalski | Portuguese (pt)
 		"pt": "áâàãçéêèíîìóôòõôúûùüñÂÁÂÀÃÇÉÊÈÍÎÌÓÔÒÕÚÙÛÜÑ",
-	 //Kreolski | Creole (cr)
+      //Kreolski | Creole (cr)
 		"cr": "áéíóúñüÁÉÍÓÚÑÜ",
-	 //Mixe-Zoque (mxz)
+      //Mixe-Zoque (mxz)
 		"mxz":"āäȧḁēëėẹ̄īïï̈ị̈ōöö̈ọ̈ūüü̈ụ̈ɨɨ̄ɨ̈ɨ̈̈ɨ̣ʉʉ̄ʉ̈ʉ̈̈ʉ̣ɛɛ̄ɛ̈ɛ̈̈ɛ̣ɔɔ̄ɔ̈ɔ̈̈ɔ̣",	
-	 //-----------------------------------------------------
+     //-----------------------------------------------------
 }
 
+//The main function of the program and creating two flags 
+//and parsing them from the command line
 func main() {
     flagHelp := flag.Bool("help", false, "View Help")
     flagLang := flag.String("lang", "pl", "The language of diacritic marks: \n (ao, ay, ba, baq, br, ch-it, co, cr, crh, crn, csb, cy, cz, di, dk, el, es, et, eu, fi, fiu, fo, fr, fy, ga, gd, gl, gn, gsw, hr, hsb, hu, is, it, kaz, kv, ku, kw, la, lb, liv, lt, lv, mdf, md, mxz, nl, no, oc, op, pl, pt, qu, rm, rom, rup, sc, sk, sl, sq, sq-kosovo, sr, sv, tr, tut, vi, x-lmk)")
     flag.Parse()
 
+    //The code checks the value of the flagHelp flag. 
+    //If the flag is true, the printHelp() function is called 
+    //and the program exits (return).
     if *flagHelp {
         printHelp()
         return
     }
 	
+    //Assigning positional arguments (i.e. arguments passed to the program 
+    //after the flags) to the inputFiles variable using the flag.Args() function.
+    //In practice, if the user did not provide any file path 
+    //when starting the program, an error message will be 
+    //displayed and the program will terminate.
     inputFiles := flag.Args()
     if len(inputFiles) == 0 {
         fmt.Println("OGONKI => Error: No file path specified. \nDisplaying help: OGONKI -help")
         return
     }
 
+    //This piece of code is used to load the contents 
+    //of files with appropriate extensions and handle any errors, if any.
     for _, inputFile := range inputFiles {
         fileExt := strings.ToLower(filepath.Ext(inputFile))
             switch fileExt {
@@ -180,15 +197,26 @@ func main() {
         continue
         }
 
+        //creates a new newContent variable that contains the changed 
+	//content of the file without diacritics. 
+	//Additionally, the outputFile variable is also created with 
+	//the file name modified (with the "_modified" suffix added). 
+	//This variable can be used to write modified content to a new file.
         newContent := replaceOgonki(string(content), *flagLang)
         outputFile := strings.TrimSuffix(inputFile, fileExt) + "_modified" + fileExt
 
+        //Saving the contents of new Content to a file called output File. 
+	//If an error occurs while saving the file, an error message 
+	//is displayed but the program continues to run.
         err = ioutil.WriteFile(outputFile, []byte(newContent), 0644)
         if err != nil {
             fmt.Printf("Error for adding support access paths %s: %s\n", outputFile, err)
             continue
         }
 		
+		//This fragment informs the user that the diacritic conversion 
+		//has been completed successfully and provides the name of the new file. 
+		//If the file format is not supported, an appropriate message is displayed.
         fmt.Printf("Diacritics swap completed successfully. \nNew file saved as %s.\n", outputFile)
         default:
         fmt.Printf("Unsupported file format: %s\n", fileExt)
@@ -196,6 +224,8 @@ func main() {
  }
 }
 
+//This code defines the replaceOgonki function, which takes two arguments: 
+//text (the text to be processed) and lang (the language of the diacritics).
 func replaceOgonki(text string, lang string) string {
     ogonkiLetters, ok := ogonki[lang]
     if !ok {
@@ -209,9 +239,12 @@ func replaceOgonki(text string, lang string) string {
     return text
 }
 
+//getReplacement() function, which takes one argument - a letter (in the form of a string) 
+//and returns its possible replacement with another letter.
 func getReplacement(letter string) string {replacements := map[string]string{ 	
 	"ą": "a", "à": "a", "á": "a", "ã": "a", "ả": "a", "ạ": "a", "ắ": "a", "ằ": "a", "ẵ": "a", "ẳ": "a", "ặ": "a", "â": "a", "ấ": "a", "ầ": "a", "ẫ": "a", "ẩ": "a", "ậ": "a", "ä": "a", "å": "a", "α": "a", "ă": "a", "ā": "a", "ǎ": "a", "a": "a", "a̱": "a", "â": "a", "ä̂": "a", "ạ": "a", "à́": "a", "a̧": "a", "ȃ": "a", "ḁ": "a", "ą̇": "a", "Ą": "A", "À": "A", "Á": "A", "Ã": "A", "Ả": "A", "Ạ": "A", "Ắ": "A", "Ằ": "A", "Ẵ": "A", "Ẳ": "A", "Ặ": "A", "Â": "A", "Ấ": "A", "Ầ": "A", "Ẫ": "A", "Ẩ": "A", "Ậ": "A", "Ä": "A", "Å": "A", "Ă": "A", "Ā": "A", "Ǎ": "A", "Ạ": "A", "A̱": "A", "Ä": "A", "Â": "A", "Ä̂": "A", "Ậ": "A", "À́": "A", "A̧": "A", "Ȃ": "A", "Ą̇": "A", "ƀ": "b", "β": "b", "ḃ": "b", "ß": "B", "Ḃ": "ẞ", "č": "c", "ć": "c", "ç": "c", "ċ": "c", "ĉ": "c", "Č": "C", "Ć": "C", "Ç": "C", "Ĉ": "C", "Ċ": "C", "ð": "d", "đ": "d", "ď": "d", "δ": "d", "ɗ́": "d", "ɗ": "d", "ḋ": "d", "Ď": "D", "Đ": "D", "Δ": "D", "Ɗ́": "D", "Ɗ": "D", "Ḋ": "D", "ė": "e", "ę": "e", "è": "e", "é": "e", "ê": "e", "ë": "e", "ẽ": "e", "ẻ": "e", "ẹ": "e", "ε": "e", "ē": "e", "ě": "e", "ẹ": "e", "e̱": "e", "ë̂": "e", "ệ": "e", "é̄": "e", "è́": "e", "ë̈": "e", "ȩ": "e", "ĕ": "e", "ȇ": "e", "ẹ̄": "e", "ế": "e", "ề": "e", "ể": "e", "ễ": "e", "ệ": "e", "ė́": "e", "̣ɛ": "e", "ɛ̄": "e", "ɛ̈": "e", "ɛ̈̈": "e", "̈̈̈̈ɛ": "e", "Ė": "E", "Ę": "E", "Ē": "E", "È": "E", "É": "E", "Ë": "E", "Ẽ": "E", "Ẻ": "E", "Ẹ": "E", "Ě": "E", "E̱": "E", "Ë̂": "E", "Ệ": "E", "É̄": "E", "È́": "E", "Ë̈": "E", "Ȩ": "E", "Ĕ": "E", "Ê": "E", "Ẹ̄": "E", "Ế": "E", "Ề": "E", "Ể": "E", "Ễ": "E", "Ệ": "E", "Ė́": "E", "f̈": "f", "φ": "f", "ḟ": "f", "F̈": "F", "Φ": "F", "Ḟ": "F", "ģ": "g", "ġ": "g", "γ": "g", "ğ": "g", "g̈": "g", "Ģ": "G", "Ġ": "G", "Γ": "G", "Ğ": "G", "Ǧ": "G", "G̈": "G", "ȟ": "h", "ħ": "h", "ḥ": "h", "Ȟ": "H", "Ħ": "H", "Ḥ": "H", "į": "i", "i̇": "i", "ì": "i", "í": "i", "î": "i", "î": "i", "ï": "i", "ĩ": "i", "ỉ": "i", "ị": "i", "ī": "i", "ι": "i", "ı": "i", "ǐ": "i", "i̱": "i", "ï̂": "i", "i̧": "i", "ĭ": "i", "ȋ": "i", "ị̄": "i", "į́": "i", "į̃": "i", "ï̈": "i", "ị̈": "i", "ɨ": "i", "ɨ̄": "i", "ɨ̈": "i", "į̇": "i", "Į": "I", "İ": "I", "Ì": "I", "Í": "I", "Î": "I", "Ï": "I", "Ĩ": "I", "Ỉ": "I", "Ị": "I", "Ǐ": "I", "I̱": "I", "Ï̂": "I", "I̧": "I", "Ĭ": "I", "Ȋ": "I", "Ī": "I", "Į́": "I", "Į̣̃": "I", "Į̇": "I", "ǰ": "j", "ь": "j", "ĵ": "j", "j́": "j", "Ь": "J", "Ĵ": "J", "J́": "J", "κ": "k", "ķ": "k", "ḳ": "k", "Ķ": "K", "Ḳ": "K", "ĺ": "l", "ľ": "l", "ļ": "l", "ł": "l", "λ": "l", "Ĺ": "L", "Ľ": "L", "Ļ": "L", "Ł": "L", "Λ": "L", "ḿ": "m", "μ": "m", "ṁ": "m", "Ḿ": "M", "Ṁ": "M", "ń": "n", "ñ": "n", "ň": "n", "ņ": "n", "ŉ": "n", "ņ̌": "n", "Ń": "N", "Ñ": "N", "Ň": "N", "Ņ": "N", "Ŋ": "N", "Ņ̌": "N", "õ": "o", "ø": "o", "ó": "o", "ô": "o", "ò": "o", "ö": "o", "ő": "o", "ō": "o", "ω": "o", "ȯ": "o", "ȱ": "o", "ỏ": "o", "ọ": "o", "ố": "o", "ồ": "o", "ỗ": "o", "ổ": "o", "ộ": "o", "ơ": "o", "ớ": "o", "ờ": "o", "ỡ": "o", "ở": "o", "ợ": "o", "ǒ": "o", "ǫ": "o", "o̱": "o", "ö̂": "o", "ó̄": "o", "ò́": "o", "ò̂": "o", "ŏ": "o", "ȏ": "o", "ọ̄": "o", "ö̈": "o", "̣ɔ": "o", "ɔ̄": "o", "ɔ̈": "o", "ɔ̈̈": "o", "ɔ̣̣": "o", "Õ": "O", "Ø": "O", "Ó": "O", "Ô": "O", "Ò": "O", "Ö": "O", "Ő": "O", "Ō": "O", "Ω": "O", "Ȯ": "O", "Ȱ": "O", "Ỏ": "O", "Ọ": "O", "Ố": "O", "Ồ": "O", "Ỗ": "O", "Ổ": "O", "Ộ": "O", "Ơ": "O", "Ớ": "O", "Ờ": "O", "Ỡ": "O", "Ở": "O", "Ợ": "O", "Ǫ": "O", "Ǒ": "O", "O̱": "O", "Ö̂": "O", "Ó̄": "O", "Ò́": "O", "Ò̂": "O", "Ŏ": "O", "Ȏ": "O", "Ọ̄": "O", "π": "p", "ṗ": "p", "Π": "P", "Ṗ": "P", "ř": "r", "ŕ": "r", "ŗ": "r", "σ": "r", "Ř": "R", "Ŕ": "R", "Ŗ": "R", "Σ": "R", "š": "s", "ś": "s", "ş": "s", "ș": "s", "τ": "s", "ŝ": "s", "ś́": "s", "ṣ": "s", "ṡ": "s", "Š": "S", "Ś": "S", "Ş": "S", "Ș": "S", "Ŝ": "S", "Ś́": "S", "Ṣ": "S", "Ṡ": "S", "ṭ": "t", "ť": "t", "ţ": "t", "ț": "t", "ŧ": "t", "ṫ": "t", "Ť": "T", "Ţ": "T", "Ț": "T", "Ṭ": "T", "Ŧ": "T", "Ṫ": "T", "ü": "u", "ú": "u", "ů": "u", "û": "u", "ù": "u", "ũ": "u", "ų": "u", "ū": "u", "ű": "u", "υ": "u", "ǘ": "u", "ǚ": "u", "ǜ": "u", "ǔ": "u", "ŭ": "u", "ǖ": "u", "ụ": "u", "u̱": "u", "ü̂": "u", "ъ": "u", "u̧": "u", "ȗ": "u", "ụ̄": "u", "ụ": "u", "ứ": "u", "ừ": "u", "ử": "u", "ữ": "u", "ự": "u", "ų̃": "u", "̄ų̃̌": "u", "ų̄": "u", "ü̈": "u", "ụ̈": "u", "̣ʉ": "u", "ʉ̄": "u", "ʉ̈": "u", "ʉ̈̈": "u", "ʉ": "u", "Ü": "U", "Ú": "U", "Ů": "U", "Û": "U", "Ù": "U", "Ũ": "U", "Ų": "U", "Ū": "U", "Ű": "U", "Ǖ": "U", "Ǘ": "U", "Ǚ": "U", "Ǜ": "U", "Ǔ": "U", "Ụ": "U", "U̱": "U", "Ŭ": "U", "Ü̂": "U", "Ъ": "U", "U̧": "U", "Ụ̄": "U", "Ụ": "U", "Ứ": "U", "Ừ": "U", "Ử": "U", "Ữ": "U", "Ų̃": "U", "Ų̄": "U", "Ų̃̄": "U", "Ų̃̌": "U", "Ų̄̌": "U", "w̌": "w", "ŵ": "w", "ẃ": "w", "ẁ": "w", "W̌": "W", "Ŵ": "W", "Ẃ": "W", "Ẁ": "W", "x̌": "x", "ξ": "x", "X̌": "X", "Ξ": "X", "ý": "y", "ỳ": "y", "ỹ": "y", "ỷ": "y", "ỵ": "y", "ŷ": "y", "ȳ": "y", "ẏ": "y", "ÿ": "y", "Ӯ": "Y", "Ý": "Y", "Ỳ": "Y", "Ỹ": "Y", "Ỷ": "Y", "Ỵ": "Y", "Ŷ": "Y", "Ȳ": "Y", "Ẏ": "Y", "Ÿ": "Y", "ż": "z", "ź": "z", "ž": "z", "ζ": "z", "Ż": "Z", "Ź": "Z", "Ž": "Z", "Θ": "TH", "Þ": "TH", "Ψ": "PS", "η": "ee", "θ": "th", "þ": "th", "χ": "ch", "ψ": "ps", "ѓ": "gj", "ќ": "kj", "љ": "lj", "њ": "nj", "џ": "dz", "ǿ": "OE", "Ǿ": "OE", "æ": "ae", "ǣ": "ae", "ǽ": "ae", "Æ": "AE", "Ǣ": "AE", "Ǽ": "AE", "œ": "oe", "Œ": "OE", "ə̄": "ə", "Ə̄": "Ə",
     }
+		//Replaces a letter character with another character if an appropriate replacement is available in the replacements map.
 		replacement, ok := replacements[letter]
 		if ok {
 			return replacement
@@ -219,6 +252,7 @@ func getReplacement(letter string) string {replacements := map[string]string{
     return letter
 }
 
+//Displays instructions and information about the OGONKI program
 func printHelp() {
     fmt.Println()                                                                
     fmt.Println("     _/_/      _/_/_/    _/_/    _/      _/  _/    _/  _/_/_/   ")
