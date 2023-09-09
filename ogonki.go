@@ -25,73 +25,73 @@ var ogonki = map[string]string{
 		"dk":"æøåÆØÅ",
 	 //Niderlandzki (Holenderski) | Dutch/Netherlands (nl) 
 		"nl": "äáéëïíóöüúÄÁÉËÍÏÓÖÜÚ",
-     	 //Estoński | Estonian (et) 
+     //Estoński | Estonian (et) 
 		"et": "äöõüšžÄÖÕÜŠŽ",
-     	 //Fiński | Finnish (fi) 
+     //Fiński | Finnish (fi) 
 		"fi":"äåöÄÅÖ",
-     	 //Francuski | French (fr)
+     //Francuski | French (fr)
 		"fr":"àâäçéèêëîïôûùüÿœæÀÄÂÇÉÈÊËÎÏÔÛÙÜŸŒÆ",
 	 //Galicyjski/Galisyjski | Galician (gl)
 		"gl": "áéíóúñüÁÉÍÓÚÑÜ",
-     	 //Węgierski | Hungarian (hu)
+     //Węgierski | Hungarian (hu)
 		"hu":"áéíóöőúüűÁÉÍÓÖŐÚÜŰ",
-     	 //Islandzki | Icelandic (is)
+     //Islandzki | Icelandic (is)
 		"is" : "áðéíóöúýþæÁÐÉÍÓÖÚÝÞÆ",
-     	 //Irlandzki | Irish (ga) 
+     //Irlandzki | Irish (ga) 
 		"ga": "áéíóúàèéìòóùúċḃḋḟġṁṗṡṫāēīíōūǽǿÁÉÍÓÚÀÈÍÌÒÓÙÚĊḂḊḞĠṀṖṠṪĀĒĪŌŪǼǾ",
-     	 //Włoski | Italian (it) 
+     //Włoski | Italian (it) 
 		"it":"àèéìòóùüÀÈÉÌÒÓÙÜ",
-     	 //Łotewski | Latvian (lv)
+     //Łotewski | Latvian (lv)
 		"lv": "āčēģīķļņšūžĀČĒĢĪĶĻŅŠŪŽ",
-     	 //Litewski | Lithuanian (lt)
+     //Litewski | Lithuanian (lt)
 		"lt": "ąčęėįį̇šųūžĄČĘĖĮĮ̇ŠŲŪŽ",
 	 //Maltański/Maltyjski | Maltese/Malta (mt)
 		"mt": "ċġħżĊĠĦŻ",
-     	 //Norweski | Norwegian (no)
+     //Norweski | Norwegian (no)
 		"no":"áéíæøóåúýÆØÁÅÉÍÓÚÝ",
-     	 //Polski | Polish (pl)
+     //Polski | Polish (pl)
 		"pl":"ąćęłńóśźżĄĆĘŁŃÓŚŹŻ",
-     	 //Rumuński | Romanian (ro)
+     //Rumuński | Romanian (ro)
 		"ro": "ăâîșțţĂÂÎȘȚŢ",
-     	 //Słowacki | Slovakia (sk)
+     //Słowacki | Slovakia (sk)
 		"sk": "áäčďéíĺľňóôŕšťúýžÁÄČĎÉÍĹĽŇÓÔŔŠŤÚÝŽ",
-     	 //Słoweński | Slovenian (sl) 
+     //Słoweński | Slovenian (sl) 
 		"sl": "ą̊ą̇ąáčćđéęíįĺľńŕšśóúųžźĄ̊Ą̇ĄÁČĆĐÉĘÍĮĹĽŃŔŠŚÓÚŲŽŹ",
-     	 //Hiszpański | Spanish (es)
+     //Hiszpański | Spanish (es)
 		"es":"áéíóúüñÁÉÍÓÚÜÑ",
-     	 //Turecki | Turkish (tr)
+     //Turecki | Turkish (tr)
 		"tr": "şığüöçŞİĞÜÖÇ",
-     	 //Wietnamski | Vietnam (vi) 
+     //Wietnamski | Vietnam (vi) 
 		"vi": "áàãảạăắằẵẳặâấầẫẩậđéèẽẻẹêếềễểệíìĩỉịóòõỏọôốồỗổộơớờỡởợúùũủụưứừữửựýỳỹỷỵÁÀÃẢẠĂẮẰẴẲẶÂẤẦẪẨẬĐÉÈẼẺẸÊẾỀỄỂỆÍÌĨỈỊÓÒÕỎỌÔỐỒỖỔỘƠỚỜỠỞỢÚÙŨỦỤƯỨỪỮỬỰÝỲỸỶỴ",
-     	 //Walijski | Welsh (cy) 
+     //Walijski | Welsh (cy) 
 		"cy": "äâêëîïôûŵŷÂÄÊËÎÏÔÛŴŶ",
-     	 //Bośniacki | Bosnia and Herzegovina (ba)
+     //Bośniacki | Bosnia and Herzegovina (ba)
 		"ba": "ćčđšžıĆČĐŠŽ",
-     	 //Grecki | Greek (el)
+     //Grecki | Greek (el)
 		"el":"άαβγδεέζηθικλμνξοπρστήίϊΐυύΰϋόφχψωώΆΓΔΘΛΈΞΠΉΊΪΣΌΦΨΏΩΎΫ",
 	 //Serbski | Serbian (sr)
 		"sr": "čćđšžüČĆĐŠŽÜ", 
-     	 //Łaciński | Latin (la)
+     //Łaciński | Latin (la)
 		"la": "áąāéęēīōūȳǖǘǚǜċćġħǰŝźćģķļłņńŗśźżǎěǐǒóúǔǖǘǚǜǧğıíįķļŉǫřśŝţťūǔůẏýžæœÁĄĀĒÉĘĪŌÓŪȲǕǗǙǛĊĆĠĦŜŹĆĢĶĻŁŅŃŖŚŹŻǍĚÍǏǑǓǕǗǙǛǦĞİĮĶĻŊǪŘŚŜŢŤÚŪǓŮẎÝŽÆŒ",
-     	 //Kurdyjski | Kurdish (ku)
+     //Kurdyjski | Kurdish (ku)
 		"ku": "âáçéêğîíışţôûýÁÂÇÉÊĞÎÍŞŢÔÛÝ",
-     	 //Farerski | Faroese (fo)
+     //Farerski | Faroese (fo)
 		"fo": "áðéíóúýæøÁÐÉÍÓÚÝÆǾØ",
-     	 //Fryzyjski | Frisian (fy)
+     //Fryzyjski | Frisian (fy)
 		"fy": "áäâêéëïîíôóöøûúüÿýÁÄÂÊÉËÏÎÍÖÓÔØÚÜÛÝŸ",
-     	 //Górnołużycki | Upper Sorbian (hsb)
+     //Górnołużycki | Upper Sorbian (hsb)
 		"hsb": "ǎáćčďđěéęȟíj́ḱĺłḿńŉóöőǫǒřŕśšŭůw̌ŵźžӯǍÁĆČĎĐĚÉȞÍJ̌J́ḰĹŁḾŃŊÓǪǑӦŐǓŬŮŔŘŚŠŴW̌ӮȲŹŽ",
-     	 //Kaszubski | Kashubian (csb)
+     //Kaszubski | Kashubian (csb)
 		"csb": "ąâãćêěëęèéé̄łïńôòóó̄ò́ò̂ôśś́üùûżźĄÂÃĆÈÊĚËĘÉÉ̄ŁÏŃÔÒÒ́Ò̂ÓÓ̄ÔÜÙÛŚŚ́ŻŹ",
-     	 //Kosowski | Kosovan (sq)
-		"sq": "çëë̈f̈g̈šïx̌ÿžÇËË̈F̈G̈ŠÏŽX̌ŸŽ", 
-     	 //Kornijski | Cornish (kw)
+     //Kosowski | Kosovan (sq)
+		"sq-kosovo": "çëë̈f̈g̈šïx̌ÿžÇËË̈F̈G̈ŠÏŽX̌ŸŽ", 
+     //Kornijski | Cornish (kw)
 		"kw": "āâēêëôōîīïûūŵẃŷȳÿǣǽĀÂĒÊËÔŌÎĪÏÛŪŴẂŸȲŶǢǼ",
-     	 //Krymskotatarski | Crimean Tatar (crh) 
+     //Krymskotatarski | Crimean Tatar (crh) 
 		"crh": "âäƀçèéëğıìíñöşûüÂÄÇÈÉËĞÌÍÑÖŞÛÜ",
-     	 //Luksemburski | Luxembourgish (lb)
+     //Luksemburski | Luxembourgish (lb)
 		"lb": "âäéëîïôöûüŷÂÄÉËÎÏÔÖÛÜŶ",
-     	 //Mołdawski    | Moldovan (md)
+     //Mołdawski    | Moldovan (md)
 		"md": "ăâîșşțţĂÂÎȘŞȚŢ", 
 	 //Romski/Cygański | Romani (rom) 
 		"rom": "ạảấầẩẫậắằẳẵặáa̧ǎăȃâãǣćčđȩéěĕȇêẹ̄ẻếềểễệêëîỉịíi̧ǐĭȋîị̄ļłňỏốồổỗộớờởỡợóo̧ǒŏȏôọ̄ǿöőřśšţťüůűùúu̧ǔŭȗûụ̄ụủứừửữựýźžẠÃẢẤẦÁẨẪẬẮẰẲẴẶA̧ǍĂȂÂÃǢĆČĐÉȨĚĔÊẸ̄ẺẾỀỂỄỆĚËỈÎỊI̧ÍǏĬȊÎỊ̄ĻŁŇỎỐỒỔỖỘỚỜỞỠỢÓO̧ǑŎȎÔỌ̄ǾÖŐŘŚŠŤŢŮÜŰÚU̧ǓŬUÙÛỤ̄ỤỦỨỪỬỮỰÝŹŽ",
@@ -99,7 +99,7 @@ var ogonki = map[string]string{
 		"gsw": "àäëïöüÿÀÄËÏÖÜŸ",
 	 //Szwajcarski włoski | Swiss Italian (ch-it) 
 		"ch-it": "àèéìòóùÀÈÉÌÒÓÙ",
-     	 //Łemkowski | Lemko (x-lmk) 
+     //Łemkowski | Lemko (x-lmk) 
 		"x-lmk": "åäǎąćďęěįǐĺľłńňóǒöøŕřśšťųüůýźžÅÄǍĄĆĎĘĚǏĮĹĽŁŃŇÓǑÖØŔŘŚŠŤŮŲÜÝŹŽ",	
 	 //Ao (języka Naga) | Ao language (ao)
 		"ao": "ǎǐěǒǔñńňřłǍĚǑǓÑŃŇŘŁ",
@@ -156,16 +156,17 @@ var ogonki = map[string]string{
 
 func main() {
     flagHelp := flag.Bool("help", false, "View Help")
-    flagLang := flag.String("lang", "pl", "The language of diacritic marks: \n (ao, ay, ba, baq, br, ch-it, co, cr, crh, crn, csb, cy, cz, di, dk, el, es, et, eu, fi, fiu, fo, fr, fy, ga, gd, gl, gn, gsw, hr, hsb, hu, is, it, kaz, kv, ku, kw, la, lb, liv, lt, lv, mdf, md, mxz, nl, no, oc, op, pl, pt, qu, rm, rom, rup, sc, sk, sl, sq, sr, sv, tr, tut, vi, x-lmk)")
+    flagLang := flag.String("lang", "pl", "The language of diacritic marks: \n (ao, ay, ba, baq, br, ch-it, co, cr, crh, crn, csb, cy, cz, di, dk, el, es, et, eu, fi, fiu, fo, fr, fy, ga, gd, gl, gn, gsw, hr, hsb, hu, is, it, kaz, kv, ku, kw, la, lb, liv, lt, lv, mdf, md, mxz, nl, no, oc, op, pl, pt, qu, rm, rom, rup, sc, sk, sl, sq, sq-kosovo, sr, sv, tr, tut, vi, x-lmk)")
     flag.Parse()
 
     if *flagHelp {
         printHelp()
         return
     }
+	
     inputFiles := flag.Args()
     if len(inputFiles) == 0 {
-        fmt.Println("OGONKI => Error: No file path specified. Displaying help: OGONKI -help")
+        fmt.Println("OGONKI => Error: No file path specified. \nDisplaying help: OGONKI -help")
         return
     }
 
@@ -187,7 +188,8 @@ func main() {
             fmt.Printf("Error for adding support access paths %s: %s\n", outputFile, err)
             continue
         }
-        fmt.Printf("Diacritics swap completed successfully. New file saved as %s.\n", outputFile)
+		
+        fmt.Printf("Diacritics swap completed successfully. \nNew file saved as %s.\n", outputFile)
         default:
         fmt.Printf("Unsupported file format: %s\n", fileExt)
     }
@@ -207,13 +209,12 @@ func replaceOgonki(text string, lang string) string {
     return text
 }
 
-func getReplacement(letter string) string {
-    replacements := map[string]string{
-        "ą,à,á,ã,ả,ạ,ă,ắ,ằ,ẵ,ẳ,ặ,â,ấ,ầ,ẫ,ẩ,ậ,ä,å,α,ă,ā,ǎ,ạ,a̱,ä,â,ä̂,ạ,à́,a̧,ȃ,ḁ,ą̇":"a","Ą,À,Á,Ã,Ả,Ạ,Ă,Ắ,Ằ,Ẵ,Ẳ,Ặ,Â,Ấ,Ầ,Ẫ,Ẩ,Ậ,Ä,Å,Ă,Ā,Ǎ,Ạ,A̱,Ä,Â,Ä̂,Ậ,À́,A̧,Ȃ,Ą̇":"A","ƀ,β,ḃ":"b","ß,Ḃ":"ẞ","č,ć,ç,ċ,ĉ":"c","Č,Ć,Ç,Ċ,Ĉ,Ċ":"C","ð,đ,ď,δ,ɗ́,ɗ,ḋ":"d","Ď,Đ,Δ,Ɗ́,Ɗ,Ḋ":"D","ė,ę,ē,è,é,ê,ë,ẽ,ẻ,ẹ,ε,ē,ě,ẹ,e̱,ë̂,ệ,é̄,è́,ë̈,ȩ,ĕ,ȇ,ẹ̄,ế,ề,ể,ễ,ệ,ė́,̣ɛ,ɛ̄,ɛ̈,ɛ̈̈,̈̈̈̈ɛ":"e","Ė,Ę,Ē,Ẹ,È,É,Ê,Ë,Ẽ,Ẻ,Ẹ,Ě,E̱,Ë̂,Ệ,É̄,È́,Ë̈,Ȩ,Ĕ,Ê,Ẹ̄,Ế,Ề,Ể,Ễ,Ệ,Ė́":"E","f̈,φ,ḟ":"f","F̈,Φ,Ḟ":"F","ģ,ġ,γ,ğ,g̈":"g","Ģ,Ġ,Γ,Ğ,Ǧ,G̈":"G","ȟ,ħ,ḥ":"h","Ȟ,Ħ,Ḥ":"H","į,i̇,ì,í,î,î,ï,ĩ,ỉ,ị,ī,ι,ı,ǐ,i̱,ï̂,i̧,ĭ,ȋ,ị̄,į́,į̃,ï̈,ị̈,ɨ,ɨ̄,ɨ̈,ɨ̈,̈ɨ,į̇":"i","Į,İ,Ì,Í,Î,Ï,Ĩ,Ỉ,Ị,Ī,Ǐ,I̱,Ï̂,I̧,Ĭ,Ȋ,Ī,Į́,Į̣̃,Į̇":"I","ǰ,ь,ĵ,j́":"j","Ь,Ĵ,J́":"J","κ,ķ,ḳ":"k","Ķ,Ḳ":"K","ĺ,ľ,ļ,ł,λ":"l","Ĺ,Ľ,Ļ,Ł,Λ":"L","ḿ,μ,ṁ":"m","Ḿ,Ṁ":"M","ń,ñ,ň,ņ,ŉ,ņ̌":"n","Ń,Ñ,Ň,Ņ,Ŋ,Ņ̌":"N","õ,ø,ó,ô,ò,ö,ő,ō,ω,ȯ,ȱ,ỏ,ọ,ố,ồ,ỗ,ổ,ộ,ơ,ớ,ờ,ỡ,ở,ợ,ǒ,ǫ,o̱,ö̂,ó̄,ò́,ò̂,ŏ,ȏ,ọ̄,ö̈,ö,̣ɔ,ɔ̄,ɔ̈,ɔ̈̈,ɔ̣̣":"o","Õ,Ø,Ó,Ô,Ò,Ö,Ő,Ō,Ω,Ȯ,Ȱ,Ỏ,Ọ,Ố,Ồ,Ỗ,Ổ,Ộ,Ơ,Ớ,Ờ,Ỡ,Ở,Ợ,Ǫ,Ǒ,O̱,Ö̂,Ó̄,Ò́,Ò̂,Ŏ,Ȏ,Ọ̄":"O","π,ṗ":"p","Π,Ṗ":"P","ř,ŕ,ŗ,σ":"r","Ř,Ŕ,Ŗ":"R","š,ś,ş,ș,τ,ŝ,ś́,ṣ,ṡ":"s","Š,Ś,Ş,Ș,Σ,Ŝ,Ś́,Ṣ,Ṡ":"S","ṭ,ť,ţ,ț,ŧ,ṫ":"t","Ť,Ţ,Ț,Ṭ,Ŧ,Ṫ":"T","ü,ú,ů,û,ù,ũ,ų,ū,ű,υ,ǘ,ǚ,ǜ,ǔ,ŭ,ǖ,ụ,u̱,ü̂,ъ,u̧,ȗ,ụ̄,ụ,ứ,ừ,ử,ữ,ự,ų̃,ų̄,ų̃,̄ų̃̌,ų̄,ü̈,ụ̈,̣ʉ,ʉ̄,ʉ̈,ʉ̈̈,ʉ":"u","Ü,Ú,Ů,Û,Ù,Ũ,Ų,Ū,Ű,Ǖ,Ǘ,Ǚ,Ǜ,Ǔ,Ụ,U̱,Ŭ,Ü̂,Ъ,U̧,Ŭ,Ụ̄,Ụ,Ứ,Ừ,Ử,Ữ,Ų̃,Ų̄,Ų̃̄,Ų̃̌,Ų̄̌":"U","w̌,ŵ,ẃ,ẁ":"w","W̌,Ŵ,Ẃ,Ẁ":"W","x̌,ξ":"x","X̌,Ξ":"X","ý,ỳ,ỹ,ỷ,ỵ,ŷ,ȳ,ẏ,ÿ":"y","Ӯ,Ý,Ỳ,Ỹ,Ỷ,Ỵ,Ŷ,Ȳ,Ẏ,Ÿ":"Y","ż,ź,ž,ζ":"z","Ż,Ź,Ž,Ź":"Z","Θ,Þ":"TH","Ψ":"PS","η":"ee","θ,þ":"th","χ":"ch","ψ":"ps","ѓ":"gj","ќ":"kj","љ":"lj","њ":"nj","џ":"dz","ǿ":"OE","Ǿ":"OE","æ,ǣ,ǽ":"ae","Æ,Ǣ,Ǽ":"AE","œ":"oe","Œ":"OE","ə̄":"ə","Ə̄":"Ə",
+func getReplacement(letter string) string {replacements := map[string]string{ 	
+	"ą": "a", "à": "a", "á": "a", "ã": "a", "ả": "a", "ạ": "a", "ắ": "a", "ằ": "a", "ẵ": "a", "ẳ": "a", "ặ": "a", "â": "a", "ấ": "a", "ầ": "a", "ẫ": "a", "ẩ": "a", "ậ": "a", "ä": "a", "å": "a", "α": "a", "ă": "a", "ā": "a", "ǎ": "a", "a": "a", "a̱": "a", "â": "a", "ä̂": "a", "ạ": "a", "à́": "a", "a̧": "a", "ȃ": "a", "ḁ": "a", "ą̇": "a", "Ą": "A", "À": "A", "Á": "A", "Ã": "A", "Ả": "A", "Ạ": "A", "Ắ": "A", "Ằ": "A", "Ẵ": "A", "Ẳ": "A", "Ặ": "A", "Â": "A", "Ấ": "A", "Ầ": "A", "Ẫ": "A", "Ẩ": "A", "Ậ": "A", "Ä": "A", "Å": "A", "Ă": "A", "Ā": "A", "Ǎ": "A", "Ạ": "A", "A̱": "A", "Ä": "A", "Â": "A", "Ä̂": "A", "Ậ": "A", "À́": "A", "A̧": "A", "Ȃ": "A", "Ą̇": "A", "ƀ": "b", "β": "b", "ḃ": "b", "ß": "B", "Ḃ": "ẞ", "č": "c", "ć": "c", "ç": "c", "ċ": "c", "ĉ": "c", "Č": "C", "Ć": "C", "Ç": "C", "Ĉ": "C", "Ċ": "C", "ð": "d", "đ": "d", "ď": "d", "δ": "d", "ɗ́": "d", "ɗ": "d", "ḋ": "d", "Ď": "D", "Đ": "D", "Δ": "D", "Ɗ́": "D", "Ɗ": "D", "Ḋ": "D", "ė": "e", "ę": "e", "è": "e", "é": "e", "ê": "e", "ë": "e", "ẽ": "e", "ẻ": "e", "ẹ": "e", "ε": "e", "ē": "e", "ě": "e", "ẹ": "e", "e̱": "e", "ë̂": "e", "ệ": "e", "é̄": "e", "è́": "e", "ë̈": "e", "ȩ": "e", "ĕ": "e", "ȇ": "e", "ẹ̄": "e", "ế": "e", "ề": "e", "ể": "e", "ễ": "e", "ệ": "e", "ė́": "e", "̣ɛ": "e", "ɛ̄": "e", "ɛ̈": "e", "ɛ̈̈": "e", "̈̈̈̈ɛ": "e", "Ė": "E", "Ę": "E", "Ē": "E", "È": "E", "É": "E", "Ë": "E", "Ẽ": "E", "Ẻ": "E", "Ẹ": "E", "Ě": "E", "E̱": "E", "Ë̂": "E", "Ệ": "E", "É̄": "E", "È́": "E", "Ë̈": "E", "Ȩ": "E", "Ĕ": "E", "Ê": "E", "Ẹ̄": "E", "Ế": "E", "Ề": "E", "Ể": "E", "Ễ": "E", "Ệ": "E", "Ė́": "E", "f̈": "f", "φ": "f", "ḟ": "f", "F̈": "F", "Φ": "F", "Ḟ": "F", "ģ": "g", "ġ": "g", "γ": "g", "ğ": "g", "g̈": "g", "Ģ": "G", "Ġ": "G", "Γ": "G", "Ğ": "G", "Ǧ": "G", "G̈": "G", "ȟ": "h", "ħ": "h", "ḥ": "h", "Ȟ": "H", "Ħ": "H", "Ḥ": "H", "į": "i", "i̇": "i", "ì": "i", "í": "i", "î": "i", "î": "i", "ï": "i", "ĩ": "i", "ỉ": "i", "ị": "i", "ī": "i", "ι": "i", "ı": "i", "ǐ": "i", "i̱": "i", "ï̂": "i", "i̧": "i", "ĭ": "i", "ȋ": "i", "ị̄": "i", "į́": "i", "į̃": "i", "ï̈": "i", "ị̈": "i", "ɨ": "i", "ɨ̄": "i", "ɨ̈": "i", "į̇": "i", "Į": "I", "İ": "I", "Ì": "I", "Í": "I", "Î": "I", "Ï": "I", "Ĩ": "I", "Ỉ": "I", "Ị": "I", "Ǐ": "I", "I̱": "I", "Ï̂": "I", "I̧": "I", "Ĭ": "I", "Ȋ": "I", "Ī": "I", "Į́": "I", "Į̣̃": "I", "Į̇": "I", "ǰ": "j", "ь": "j", "ĵ": "j", "j́": "j", "Ь": "J", "Ĵ": "J", "J́": "J", "κ": "k", "ķ": "k", "ḳ": "k", "Ķ": "K", "Ḳ": "K", "ĺ": "l", "ľ": "l", "ļ": "l", "ł": "l", "λ": "l", "Ĺ": "L", "Ľ": "L", "Ļ": "L", "Ł": "L", "Λ": "L", "ḿ": "m", "μ": "m", "ṁ": "m", "Ḿ": "M", "Ṁ": "M", "ń": "n", "ñ": "n", "ň": "n", "ņ": "n", "ŉ": "n", "ņ̌": "n", "Ń": "N", "Ñ": "N", "Ň": "N", "Ņ": "N", "Ŋ": "N", "Ņ̌": "N", "õ": "o", "ø": "o", "ó": "o", "ô": "o", "ò": "o", "ö": "o", "ő": "o", "ō": "o", "ω": "o", "ȯ": "o", "ȱ": "o", "ỏ": "o", "ọ": "o", "ố": "o", "ồ": "o", "ỗ": "o", "ổ": "o", "ộ": "o", "ơ": "o", "ớ": "o", "ờ": "o", "ỡ": "o", "ở": "o", "ợ": "o", "ǒ": "o", "ǫ": "o", "o̱": "o", "ö̂": "o", "ó̄": "o", "ò́": "o", "ò̂": "o", "ŏ": "o", "ȏ": "o", "ọ̄": "o", "ö̈": "o", "̣ɔ": "o", "ɔ̄": "o", "ɔ̈": "o", "ɔ̈̈": "o", "ɔ̣̣": "o", "Õ": "O", "Ø": "O", "Ó": "O", "Ô": "O", "Ò": "O", "Ö": "O", "Ő": "O", "Ō": "O", "Ω": "O", "Ȯ": "O", "Ȱ": "O", "Ỏ": "O", "Ọ": "O", "Ố": "O", "Ồ": "O", "Ỗ": "O", "Ổ": "O", "Ộ": "O", "Ơ": "O", "Ớ": "O", "Ờ": "O", "Ỡ": "O", "Ở": "O", "Ợ": "O", "Ǫ": "O", "Ǒ": "O", "O̱": "O", "Ö̂": "O", "Ó̄": "O", "Ò́": "O", "Ò̂": "O", "Ŏ": "O", "Ȏ": "O", "Ọ̄": "O", "π": "p", "ṗ": "p", "Π": "P", "Ṗ": "P", "ř": "r", "ŕ": "r", "ŗ": "r", "σ": "r", "Ř": "R", "Ŕ": "R", "Ŗ": "R", "Σ": "R", "š": "s", "ś": "s", "ş": "s", "ș": "s", "τ": "s", "ŝ": "s", "ś́": "s", "ṣ": "s", "ṡ": "s", "Š": "S", "Ś": "S", "Ş": "S", "Ș": "S", "Ŝ": "S", "Ś́": "S", "Ṣ": "S", "Ṡ": "S", "ṭ": "t", "ť": "t", "ţ": "t", "ț": "t", "ŧ": "t", "ṫ": "t", "Ť": "T", "Ţ": "T", "Ț": "T", "Ṭ": "T", "Ŧ": "T", "Ṫ": "T", "ü": "u", "ú": "u", "ů": "u", "û": "u", "ù": "u", "ũ": "u", "ų": "u", "ū": "u", "ű": "u", "υ": "u", "ǘ": "u", "ǚ": "u", "ǜ": "u", "ǔ": "u", "ŭ": "u", "ǖ": "u", "ụ": "u", "u̱": "u", "ü̂": "u", "ъ": "u", "u̧": "u", "ȗ": "u", "ụ̄": "u", "ụ": "u", "ứ": "u", "ừ": "u", "ử": "u", "ữ": "u", "ự": "u", "ų̃": "u", "̄ų̃̌": "u", "ų̄": "u", "ü̈": "u", "ụ̈": "u", "̣ʉ": "u", "ʉ̄": "u", "ʉ̈": "u", "ʉ̈̈": "u", "ʉ": "u", "Ü": "U", "Ú": "U", "Ů": "U", "Û": "U", "Ù": "U", "Ũ": "U", "Ų": "U", "Ū": "U", "Ű": "U", "Ǖ": "U", "Ǘ": "U", "Ǚ": "U", "Ǜ": "U", "Ǔ": "U", "Ụ": "U", "U̱": "U", "Ŭ": "U", "Ü̂": "U", "Ъ": "U", "U̧": "U", "Ụ̄": "U", "Ụ": "U", "Ứ": "U", "Ừ": "U", "Ử": "U", "Ữ": "U", "Ų̃": "U", "Ų̄": "U", "Ų̃̄": "U", "Ų̃̌": "U", "Ų̄̌": "U", "w̌": "w", "ŵ": "w", "ẃ": "w", "ẁ": "w", "W̌": "W", "Ŵ": "W", "Ẃ": "W", "Ẁ": "W", "x̌": "x", "ξ": "x", "X̌": "X", "Ξ": "X", "ý": "y", "ỳ": "y", "ỹ": "y", "ỷ": "y", "ỵ": "y", "ŷ": "y", "ȳ": "y", "ẏ": "y", "ÿ": "y", "Ӯ": "Y", "Ý": "Y", "Ỳ": "Y", "Ỹ": "Y", "Ỷ": "Y", "Ỵ": "Y", "Ŷ": "Y", "Ȳ": "Y", "Ẏ": "Y", "Ÿ": "Y", "ż": "z", "ź": "z", "ž": "z", "ζ": "z", "Ż": "Z", "Ź": "Z", "Ž": "Z", "Θ": "TH", "Þ": "TH", "Ψ": "PS", "η": "ee", "θ": "th", "þ": "th", "χ": "ch", "ψ": "ps", "ѓ": "gj", "ќ": "kj", "љ": "lj", "њ": "nj", "џ": "dz", "ǿ": "OE", "Ǿ": "OE", "æ": "ae", "ǣ": "ae", "ǽ": "ae", "Æ": "AE", "Ǣ": "AE", "Ǽ": "AE", "œ": "oe", "Œ": "OE", "ə̄": "ə", "Ə̄": "Ə",
     }
-    replacement, ok := replacements[letter]
-    if ok {
-        return replacement
+		replacement, ok := replacements[letter]
+		if ok {
+			return replacement
     }
     return letter
 }
